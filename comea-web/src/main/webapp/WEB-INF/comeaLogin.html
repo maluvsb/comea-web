@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginComea.css">
+</head>
+
+<body>
+    <header>
+        <img src="comea.png" alt="" class="img">
+    </header>
+
+    <div class="page">
+        <form method="POST" class="formLogin">
+            <h1>Login</h1>
+            <p>Digite os seus dados de acesso no campo abaixo:</p>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" autofocus="true" />
+
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha" />
+            <a href="/">Esqueci minha senha</a>
+
+            <input type="button" value="Acessar" class="btn" id="loginButton" />
+        </form>
+    </div>
+
+    <footer>
+        <p> &copy; 2023 COMEA </p>
+    </footer>
+
+    <script>
+        class LoginPage {
+            constructor() {
+                this.loginButton = document.getElementById("loginButton");
+                this.loginButton.addEventListener("click", this.redirect.bind(this));
+            }
+
+            redirect() {
+                window.location.href = "comeaBoard.html";
+            }
+        }
+
+        // Criando uma instância da classe LoginPage
+        const loginPage = new LoginPage();
+
+    </script>
+
+</body>
+</html>

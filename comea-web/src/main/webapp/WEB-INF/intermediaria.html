@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
+    <title>Image Viewer</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="#">
+</head>
+
+<body>
+    <div id="image-container"></div>
+
+    <script>
+        class ImageViewer {
+            constructor(imageUrl) {
+                this.imageUrl = decodeURIComponent(imageUrl);
+                this.imageContainer = document.getElementById("image-container");
+            }
+
+            displayImage() {
+                var image = document.createElement("img");
+                image.src = this.imageUrl;
+                image.alt = "Imagem";
+                image.classList.add("image-viewer-size");
+                image.addEventListener("click", this.redirectToHomePage.bind(this));
+
+                this.imageContainer.appendChild(image);
+            }
+
+            redirectToHomePage() {
+                window.location.href = "comeaBoard.html";
+            }
+
+            static getUrlParameter(name) {
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(window.location.href);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+        }
+
+        // Criando uma instância da classe ImageViewer
+        var imageUrl = ImageViewer.getUrlParameter("image");
+        var imageViewer = new ImageViewer(imageUrl);
+        imageViewer.displayImage();
+
+        // Redirecionar após 7 segundos
+        setTimeout(function() {
+            window.location.href = "comeaBoard.html";
+        }, 7000);
+
+    </script>
+
+</body>
+</html>
