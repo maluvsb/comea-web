@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Miro Board</title>
+        <link rel="stylesheet" href="board.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="comeaLogin.html">
+                <img src="boardmiro.png" alt="" class="img">
+            </a>
+        </header>
+
+        <div id="board-container">
+            <iframe width="1400" height="750" src="https://miro.com/app/live-embed/uXjVMEuh1I4=/?moveToViewport=-740,-822,1478,758&embedId=741489065113" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+        </div>
+
+        <div id="conteiner">
+            <input type="submit" value="Clique para pesquisa de Imagem" class="button" onclick="redirect()" />
+        </div>
+
+        <footer>
+            <p> &copy; 2023 COMEA </p>
+        </footer>
+
+        <script>
+            
+            //class que redireciona para o unsplash
+            class BoardPage {
+                constructor() {
+                    this.button = document.querySelector(".button");
+                    this.button.addEventListener("click", this.redirect.bind(this));
+                }
+
+                redirect() {
+                    window.location.href = "unsplash.html";
+                }
+            }
+
+            const boardPage = new BoardPage();
+        </script>
+
+    </body>
+</html>
