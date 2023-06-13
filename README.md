@@ -4,4 +4,6 @@ Aplicativo desenvolvido para Cadeira de Projetos 3, do curso de Ciência da Comp
 
 Atividade desenvolvida por alunos do terceiro período do curso
 
-Envolve as linguagens de html, css e JavaScript para criação de uma página interativa que reproduz o iframe do miro, e, ainda, é possível visualizar o consumo da API em JavaScript do site Unsplash, reproduzindo as 10 imagens mais pesquisadas em um site, sendo possível o retorno dessa requisição em uma página desenvolvida com html e css.
+Envolve html, css e JavaScript para criação de uma página interativa que reproduz o iframe do miro, e, ainda, é possível visualizar o consumo da API em JavaScript do site Unsplash, reproduzindo as 10 imagens mais pesquisadas em um site, o retorno dessa requisição é reproduzido em uma página desenvolvida com html e css.
+
+Abrindo a imagem clicada em uma página intermediária em tamanho real e depois sendo possível copiá-la dentro do board do Miro, o qual você é redirecionado se ficar nessa página intermediária durante o período de 7 segundos.
